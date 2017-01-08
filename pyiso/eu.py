@@ -111,6 +111,96 @@ class EUClient(BaseClient):
             'ENTSOe_ID': 'CTY|GB!CTA|10YGB----------A'},
         }
 
+    BIDDING_ZONES = {
+        'AL': {'Code': 'BZN|AL', 'country': 'Albania', 'ENTSOe_ID': 'CTY|10YAL-KESH-----5!BZN|10YAL-KESH-----5'},
+        'BA': {'Code': 'BZN|BA', 'country': 'Bosnia and Herz.',
+               'ENTSOe_ID': 'CTY|10YBA-JPCC-----D!BZN|10YBA-JPCC-----D'},
+        'BE': {'Code': 'BZN|BE', 'country': 'Belgium', 'ENTSOe_ID': 'CTY|10YBE----------2!BZN|10YBE----------2'},
+        'BG': {'Code': 'BZN|BG', 'country': 'Bulgaria', 'ENTSOe_ID': 'CTY|10YCA-BULGARIA-R!BZN|10YCA-BULGARIA-R'},
+        'BY': {'Code': 'BZN|BY', 'country': 'Belarus', 'ENTSOe_ID': 'CTY|BY!BZN|10Y1001A1001A51S'},
+        'CH': {'Code': 'BZN|CH', 'country': 'Switzerland', 'ENTSOe_ID': 'CTY|10YCH-SWISSGRIDZ!BZN|10YCH-SWISSGRIDZ'},
+        'CY': {'Code': 'BZN|CY', 'country': 'Cyprus', 'ENTSOe_ID': 'CTY|10YCY-1001A0003J!BZN|10YCY-1001A0003J'},
+        'CZ': {'Code': 'BZN|CZ', 'country': 'Czech Republic', 'ENTSOe_ID': 'CTY|10YCZ-CEPS-----N!BZN|10YCZ-CEPS-----N'},
+        'CZ+DE+SK': {'Code': 'BZN|CZ+DE+SK', 'country': 'Slovakia',
+                     'ENTSOe_ID': 'CTY|10YSK-SEPS-----K!BZN|10YDOM-CZ-DE-SKK'},
+        'DE-AT-LU': {'Code': 'BZN|DE-AT-LU', 'country': 'Luxembourg',
+                     'ENTSOe_ID': 'CTY|10YLU-CEGEDEL-NQ!BZN|10Y1001A1001A63L'},
+        'DK1': {'Code': 'BZN|DK1', 'country': 'Denmark', 'ENTSOe_ID': 'CTY|10Y1001A1001A65H!BZN|10YDK-1--------W'},
+        'DK2': {'Code': 'BZN|DK2', 'country': 'Denmark', 'ENTSOe_ID': 'CTY|10Y1001A1001A65H!BZN|10YDK-2--------M'},
+        'EE': {'Code': 'BZN|EE', 'country': 'Estonia', 'ENTSOe_ID': 'CTY|10Y1001A1001A39I!BZN|10Y1001A1001A39I'},
+        'ES': {'Code': 'BZN|ES', 'country': 'Spain', 'ENTSOe_ID': 'CTY|10YES-REE------0!BZN|10YES-REE------0'},
+        'FI': {'Code': 'BZN|FI', 'country': 'Finland', 'ENTSOe_ID': 'CTY|10YFI-1--------U!BZN|10YFI-1--------U'},
+        'FR': {'Code': 'BZN|FR', 'country': 'France', 'ENTSOe_ID': 'CTY|10YFR-RTE------C!BZN|10YFR-RTE------C'},
+        'GB': {'Code': 'BZN|GB', 'country': 'United Kingdom', 'ENTSOe_ID': 'CTY|GB!BZN|10YGB----------A'},
+        'GR': {'Code': 'BZN|GR', 'country': 'Greece', 'ENTSOe_ID': 'CTY|10YGR-HTSO-----Y!BZN|10YGR-HTSO-----Y'},
+        'HR': {'Code': 'BZN|HR', 'country': 'Croatia', 'ENTSOe_ID': 'CTY|10YHR-HEP------M!BZN|10YHR-HEP------M'},
+        'HU': {'Code': 'BZN|HU', 'country': 'Hungary', 'ENTSOe_ID': 'CTY|10YHU-MAVIR----U!BZN|10YHU-MAVIR----U'},
+        'IE(SEM)': {'Code': 'BZN|IE(SEM)', 'country': 'United Kingdom', 'ENTSOe_ID': 'CTY|GB!BZN|10Y1001A1001A59C',
+                    'da_market': 'DAHH', 'da_frequency': '30m'},
+        'IT-Brindisi': {'Code': 'BZN|IT-Brindisi', 'country': 'Italy',
+                        'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A699'},
+        'IT-Centre-North': {'Code': 'BZN|IT-Centre-North', 'country': 'Italy',
+                            'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A70O'},
+        'IT-Centre-South': {'Code': 'BZN|IT-Centre-South', 'country': 'Italy',
+                            'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A71M'},
+        'IT-Foggia': {'Code': 'BZN|IT-Foggia', 'country': 'Italy',
+                      'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A72K'},
+        'IT-GR': {'Code': 'BZN|IT-GR', 'country': 'Italy', 'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A66F'},
+        'IT-Malta': {'Code': 'BZN|IT-Malta', 'country': 'Italy',
+                     'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A877'},
+        'IT-North': {'Code': 'BZN|IT-North', 'country': 'Italy',
+                     'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A73I'},
+        'IT-North-AT': {'Code': 'BZN|IT-North-AT', 'country': 'Italy',
+                        'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A80L'},
+        'IT-North-CH': {'Code': 'BZN|IT-North-CH', 'country': 'Italy',
+                        'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A68B'},
+        'IT-North-FR': {'Code': 'BZN|IT-North-FR', 'country': 'Italy',
+                        'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A81J'},
+        'IT-North-SI': {'Code': 'BZN|IT-North-SI', 'country': 'Italy',
+                        'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A67D'},
+        'IT-Priolo': {'Code': 'BZN|IT-Priolo', 'country': 'Italy',
+                      'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A76C'},
+        'IT-Rossano': {'Code': 'BZN|IT-Rossano', 'country': 'Italy',
+                       'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A77A'},
+        'IT-SACOAC': {'Code': 'BZN|IT-SACOAC', 'country': 'Italy',
+                      'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A885'},
+        'IT-SACODC': {'Code': 'BZN|IT-SACODC', 'country': 'Italy',
+                      'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A893'},
+        'IT-Sardinia': {'Code': 'BZN|IT-Sardinia', 'country': 'Italy',
+                        'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A74G'},
+        'IT-Sicily': {'Code': 'BZN|IT-Sicily', 'country': 'Italy',
+                      'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A75E'},
+        'IT-South': {'Code': 'BZN|IT-South', 'country': 'Italy',
+                     'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!BZN|10Y1001A1001A788'},
+        'LT': {'Code': 'BZN|LT', 'country': 'Lithuania', 'ENTSOe_ID': 'CTY|10YLT-1001A0008Q!BZN|10YLT-1001A0008Q'},
+        'LV': {'Code': 'BZN|LV', 'country': 'Latvia', 'ENTSOe_ID': 'CTY|10YLV-1001A00074!BZN|10YLV-1001A00074'},
+        'MD': {'Code': 'BZN|MD', 'country': 'Moldova', 'ENTSOe_ID': 'CTY|MD!BZN|Not delivered MD'},
+        'ME': {'Code': 'BZN|ME', 'country': 'Montenegro', 'ENTSOe_ID': 'CTY|10YCS-CG-TSO---S!BZN|10YCS-CG-TSO---S'},
+        'MK': {'Code': 'BZN|MK', 'country': 'FYR Macedonia', 'ENTSOe_ID': 'CTY|10YMK-MEPSO----8!BZN|10YMK-MEPSO----8'},
+        'MT': {'Code': 'BZN|MT', 'country': 'Malta', 'ENTSOe_ID': 'CTY|10Y1001A1001A93C!BZN|10Y1001A1001A93C'},
+        'NL': {'Code': 'BZN|NL', 'country': 'Netherlands', 'ENTSOe_ID': 'CTY|10YNL----------L!BZN|10YNL----------L'},
+        'NO1': {'Code': 'BZN|NO1', 'country': 'Norway', 'ENTSOe_ID': 'CTY|10YNO-0--------C!BZN|10YNO-1--------2'},
+        'NO2': {'Code': 'BZN|NO2', 'country': 'Norway', 'ENTSOe_ID': 'CTY|10YNO-0--------C!BZN|10YNO-2--------T'},
+        'NO3': {'Code': 'BZN|NO3', 'country': 'Norway', 'ENTSOe_ID': 'CTY|10YNO-0--------C!BZN|10YNO-3--------J'},
+        'NO4': {'Code': 'BZN|NO4', 'country': 'Norway', 'ENTSOe_ID': 'CTY|10YNO-0--------C!BZN|10YNO-4--------9'},
+        'NO5': {'Code': 'BZN|NO5', 'country': 'Norway', 'ENTSOe_ID': 'CTY|10YNO-0--------C!BZN|10Y1001A1001A48H'},
+        'PL': {'Code': 'BZN|PL', 'country': 'Poland', 'ENTSOe_ID': 'CTY|10YPL-AREA-----S!BZN|10YPL-AREA-----S'},
+        'PT': {'Code': 'BZN|PT', 'country': 'Portugal', 'ENTSOe_ID': 'CTY|10YPT-REN------W!BZN|10YPT-REN------W'},
+        'RO': {'Code': 'BZN|RO', 'country': 'Romania', 'ENTSOe_ID': 'CTY|10YRO-TEL------P!BZN|10YRO-TEL------P'},
+        'RS': {'Code': 'BZN|RS', 'country': 'Serbia', 'ENTSOe_ID': 'CTY|10YCS-SERBIATSOV!BZN|10YCS-SERBIATSOV'},
+        'RU': {'Code': 'BZN|RU', 'country': 'Russia', 'ENTSOe_ID': 'CTY|RU!BZN|10Y1001A1001A49F'},
+        'RU-KGD': {'Code': 'BZN|RU-KGD', 'country': 'Russia', 'ENTSOe_ID': 'CTY|RU!BZN|10Y1001A1001A50U'},
+        'SE1': {'Code': 'BZN|SE1', 'country': 'Sweden', 'ENTSOe_ID': 'CTY|10YSE-1--------K!BZN|10Y1001A1001A44P'},
+        'SE2': {'Code': 'BZN|SE2', 'country': 'Sweden', 'ENTSOe_ID': 'CTY|10YSE-1--------K!BZN|10Y1001A1001A45N'},
+        'SE3': {'Code': 'BZN|SE3', 'country': 'Sweden', 'ENTSOe_ID': 'CTY|10YSE-1--------K!BZN|10Y1001A1001A46L'},
+        'SE4': {'Code': 'BZN|SE4', 'country': 'Sweden', 'ENTSOe_ID': 'CTY|10YSE-1--------K!BZN|10Y1001A1001A47J'},
+        'SI': {'Code': 'BZN|SI', 'country': 'Slovenia', 'ENTSOe_ID': 'CTY|10YSI-ELES-----O!BZN|10YSI-ELES-----O'},
+        'SK': {'Code': 'BZN|SK', 'country': 'Slovakia', 'ENTSOe_ID': 'CTY|10YSK-SEPS-----K!BZN|10YSK-SEPS-----K'},
+        'TR': {'Code': 'BZN|TR', 'country': 'Turkey', 'ENTSOe_ID': 'CTY|TR!BZN|10YTR-TEIAS----W'},
+        'UA': {'Code': 'BZN|UA', 'country': 'Ukraine', 'ENTSOe_ID': 'CTY|UA!BZN|10Y1001A1001A869'},
+        'UA-WEPS': {'Code': 'BZN|UA-WEPS', 'country': 'Ukraine', 'ENTSOe_ID': 'CTY|UA!BZN|10YUA-WEPS-----0'}
+    }
+
     def get_load(self, control_area=None, latest=False, start_at=None, end_at=None,
                  forecast=False, **kwargs):
         self.handle_options(data='load', start_at=start_at, end_at=end_at, forecast=forecast,
@@ -127,6 +217,33 @@ class EUClient(BaseClient):
         df = pd.concat(pieces)
         sliced = self.slice_times(df)
         return self.serialize_faster(sliced)
+
+
+    def get_day_ahead_price(self, bidding_zone=None, latest=False, start_at=None, end_at=None, **kwargs):
+        self.handle_options(data='day_ahead_price', start_at=start_at, end_at=end_at,
+                            latest=latest, bidding_zone=bidding_zone, forecast=False, **kwargs)
+        try:
+            self.options['market'] = self.BIDDING_ZONES[bidding_zone]['da_market']
+            self.options['frequency'] = self.BIDDING_ZONES[bidding_zone]['da_frequency']
+        except KeyError:
+            # default: hourly, market type DAHR
+            # market code 'DAHR' stands for day ahead hourly?
+            self.options['market'] = 'DAHR'
+            self.options['frequency'] = '1hr'
+
+        pieces = []
+        export_endpoint = 'transmission-domain/r2/dayAheadPrices/export'
+        for date in self.dates():
+            payload = self.construct_payload_bidding_zone(date)
+            url = self.base_url + export_endpoint
+            response = self.fetch_entsoe(url, payload)
+            day_df = self.parse_day_ahead_price(response)
+            pieces.append(day_df)
+
+        df = pd.concat(pieces)
+        sliced = self.slice_times(df)
+        return self.serialize_faster(sliced)
+
 
     def handle_options(self, **kwargs):
         # regular handle options
@@ -172,7 +289,10 @@ class EUClient(BaseClient):
 
         r = self.request(url, params=payload)
         # TODO error checking
-        if len(r.text) == 0:
+        if (len(r.text) == 0) or (r.status_code == 500):
+            # ENTSOe responds with Error 500: "The amount of allowed requests from your IP exceed the limit."
+            # in case of too many subsequent requests
+
             if count > 3:  # try 3 times to get response
                 LOGGER.warn('Request failed, no response found after %i attempts' % count)
                 return False
@@ -213,6 +333,37 @@ class EUClient(BaseClient):
         }
         return payload
 
+
+    def construct_payload_bidding_zone(self, date):
+        # format date
+        format_str = '%d.%m.%Y'
+        date_str = date.strftime(format_str) + ' 00:00|UTC|DAY'
+
+        # TSO ID from control area code
+        try:
+            TSO_ID = self.BIDDING_ZONES[self.options['bidding_zone']]['ENTSOe_ID']
+        except KeyError:
+            msg = 'Bidding zone code not found for %s. Options are %s' % (self.options['bidding_zone'],
+                                                                          sorted(self.BIDDING_ZONES.keys()))
+            raise ValueError(msg)
+
+        payload = {
+            'name': '',
+            'defaultValue': 'false',
+            'viewType': 'TABLE',
+            'areaType': 'BZN',
+            'atch': 'false',
+            'dateTime.dateTime': date_str,
+            'biddingZone.values': TSO_ID,
+            'dateTime.timezone': 'UTC',
+            'dateTime.timezone_input': 'UTC',
+            'exportType': 'CSV',
+            'dataItem': 'ALL',
+            'timeRange': 'DEFAULT',
+        }
+        return payload
+
+
     def parse_load_response(self, response):
         df = pd.read_csv(StringIO(response))
 
@@ -249,5 +400,56 @@ class EUClient(BaseClient):
         df['ba_name'] = self.options['control_area']
         df['freq'] = '1hr'
         df['market'] = 'RTHR'  # not necessarily appropriate terminology
+
+        return df
+
+
+    def parse_day_ahead_price(self, response):
+        df = pd.read_csv(StringIO(response))
+
+        timestamp_col = 'MTU (UTC)'
+        # get START_TIME_UTC as tz-aware datetime
+        df['START_TIME_UTC'], df['END_TIME_UTC'] = zip(
+            *df[timestamp_col].apply(lambda x: x.split(' - ')))
+
+        # Why do these methods only work on Index and not Series?
+        df.set_index(df.START_TIME_UTC, inplace=True)
+        df.index = pd.to_datetime(df.index, utc=True, format='%d.%m.%Y %H:%M')
+        df.index.set_names('timestamp', inplace=True)
+
+        # columns to drop
+        drop_col = [timestamp_col, 'END_TIME_UTC', 'START_TIME_UTC']
+
+        # in general, most prices are provided as numbers in a column labeled e. g. 'Day-ahead Price [EUR/MWh]'
+        # however, some prices are provided as strings in a column labeled 'Day-ahead Price [Currency/MWh]', e. g. as '56.56 EUR'
+        currmwh_col = 'Day-ahead Price [Currency/MWh]'
+        if currmwh_col in df.columns:
+            # helper function
+            def split_price_and_currency(x_df):
+                template_str = 'Day-ahead Price [{}/MWh]'
+                currency_str = template_str.format('Currency')
+                prc_and_crrncy = str(x_df[currency_str])
+                if prc_and_crrncy != 'nan':
+                    (prc_str, crrncy) = prc_and_crrncy.split(' ')
+                    col_name = template_str.format(crrncy)
+                    x_df[col_name] = float(prc_str)
+                return x_df
+
+            df = df.apply(split_price_and_currency, axis=1)
+            drop_col.append(currmwh_col)
+
+        # drop columns
+        df.drop(drop_col, axis=1, inplace=True)
+
+        # drop nan rows
+        df.replace('-', np.nan, inplace=True)
+        df.replace('N/A', np.nan, inplace=True)
+        subset_cols = [x for x in df.columns if x != 'timestamp']
+        df.dropna(subset=subset_cols, inplace=True)
+
+        # Add columns
+        df['ba_name'] = self.options['bidding_zone']
+        df['freq'] = self.options['frequency']
+        df['market'] = self.options['market']  # not necessarily appropriate terminology
 
         return df
