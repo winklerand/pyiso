@@ -44,10 +44,18 @@ class TestEU(TestCase):
         r = self.c.auth()
         self.assertIn('Unknown error:', r)
 
-    def test_throttled(self):
+    def test_throttled_response_empty(self):
         self.c.session = mock.MagicMock()
         response = mock.MagicMock()
         response.text = ''
+        self.c.session.get.return_value = response
+        r = self.c.fetch_entsoe('url', 'payload')
+        self.assertFalse(r)
+
+    def test_throttled_error_500(self):
+        self.c.session = mock.MagicMock()
+        response = mock.MagicMock()
+        response.status_code = 500
         self.c.session.get.return_value = response
         r = self.c.fetch_entsoe('url', 'payload')
         self.assertFalse(r)
