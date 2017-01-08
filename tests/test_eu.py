@@ -70,3 +70,6 @@ class TestEU(TestCase):
 
     def test_bad_control_area(self):
         self.assertRaises(ValueError, self.c.get_load, 'not-a-cta', latest=True)
+
+    def test_bad_bidding_zone(self):
+        self.assertRaises(ValueError, self.c.get_day_ahead_price, 'not-a-bzn', start_at = '2016-12-01', end_at = '2016-12-06')
