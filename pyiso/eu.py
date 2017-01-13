@@ -201,6 +201,66 @@ class EUClient(BaseClient):
         'UA-WEPS': {'Code': 'BZN|UA-WEPS', 'country': 'Ukraine', 'ENTSOe_ID': 'CTY|UA!BZN|10YUA-WEPS-----0'}
     }
 
+    MARKET_BALANCING_AREAS = {
+        'AL': {'country': 'Albania', 'Code': 'MBA|AL', 'ENTSOe_ID': 'CTY|10YAL-KESH-----5!MBA|10YAL-KESH-----5'},
+        'AT': {'country': 'Austria', 'Code': 'MBA|AT', 'ENTSOe_ID': 'CTY|10YAT-APG------L!MBA|10YAT-APG------L'},
+        'BA': {'country': 'Bosnia and Herz.', 'Code': 'MBA|BA',
+               'ENTSOe_ID': 'CTY|10YBA-JPCC-----D!MBA|10YBA-JPCC-----D'},
+        'BE': {'country': 'Belgium', 'Code': 'MBA|BE', 'ENTSOe_ID': 'CTY|10YBE----------2!MBA|10YBE----------2'},
+        'BG': {'country': 'Bulgaria', 'Code': 'MBA|BG', 'ENTSOe_ID': 'CTY|10YCA-BULGARIA-R!MBA|10YCA-BULGARIA-R'},
+        'BY': {'country': 'Belarus', 'Code': 'MBA|BY', 'ENTSOe_ID': 'CTY|BY!MBA|10Y1001A1001A51S'},
+        'CH': {'country': 'Switzerland', 'Code': 'MBA|CH', 'ENTSOe_ID': 'CTY|10YCH-SWISSGRIDZ!MBA|10YCH-SWISSGRIDZ'},
+        'CY': {'country': 'Cyprus', 'Code': 'MBA|CY', 'ENTSOe_ID': 'CTY|10YCY-1001A0003J!MBA|10YCY-1001A0003J'},
+        'CZ': {'country': 'Czech Republic', 'Code': 'MBA|CZ', 'ENTSOe_ID': 'CTY|10YCZ-CEPS-----N!MBA|10YCZ-CEPS-----N'},
+        'DE-LU': {'country': 'Luxembourg', 'Code': 'MBA|DE-LU',
+                  'ENTSOe_ID': 'CTY|10YLU-CEGEDEL-NQ!MBA|10Y1001A1001A82H'},
+        'DK1': {'country': 'Denmark', 'Code': 'MBA|DK1', 'ENTSOe_ID': 'CTY|10Y1001A1001A65H!MBA|10YDK-1--------W'},
+        'DK2': {'country': 'Denmark', 'Code': 'MBA|DK2', 'ENTSOe_ID': 'CTY|10Y1001A1001A65H!MBA|10YDK-2--------M'},
+        'EE': {'country': 'Estonia', 'Code': 'MBA|EE', 'ENTSOe_ID': 'CTY|10Y1001A1001A39I!MBA|10Y1001A1001A39I'},
+        'ES': {'country': 'Spain', 'Code': 'MBA|ES', 'ENTSOe_ID': 'CTY|10YES-REE------0!MBA|10YES-REE------0'},
+        'FI': {'country': 'Finland', 'Code': 'MBA|FI', 'ENTSOe_ID': 'CTY|10YFI-1--------U!MBA|10YFI-1--------U'},
+        'FR': {'country': 'France', 'Code': 'MBA|FR', 'ENTSOe_ID': 'CTY|10YFR-RTE------C!MBA|10YFR-RTE------C'},
+        'GB': {'country': 'United Kingdom', 'Code': 'MBA|GB', 'ENTSOe_ID': 'CTY|GB!MBA|10YGB----------A'},
+        'GR': {'country': 'Greece', 'Code': 'MBA|GR', 'ENTSOe_ID': 'CTY|10YGR-HTSO-----Y!MBA|10YGR-HTSO-----Y'},
+        'HR': {'country': 'Croatia', 'Code': 'MBA|HR', 'ENTSOe_ID': 'CTY|10YHR-HEP------M!MBA|10YHR-HEP------M'},
+        'HU': {'country': 'Hungary', 'Code': 'MBA|HU', 'ENTSOe_ID': 'CTY|10YHU-MAVIR----U!MBA|10YHU-MAVIR----U'},
+        'IE(SEM)': {'country': 'United Kingdom', 'Code': 'MBA|IE(SEM)', 'ENTSOe_ID': 'CTY|GB!MBA|10Y1001A1001A59C'},
+        'IT': {'country': 'Italy', 'Code': 'MBA|IT', 'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!MBA|10YIT-GRTN-----B'},
+        'IT-MACRZONENORTH': {'country': 'Italy', 'Code': 'MBA|IT-MACRZONENORTH',
+                             'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!MBA|10Y1001A1001A84D'},
+        'IT-MACRZONESOUTH': {'country': 'Italy', 'Code': 'MBA|IT-MACRZONESOUTH',
+                             'ENTSOe_ID': 'CTY|10YIT-GRTN-----B!MBA|10Y1001A1001A85B'},
+        'LT': {'country': 'Lithuania', 'Code': 'MBA|LT', 'ENTSOe_ID': 'CTY|10YLT-1001A0008Q!MBA|10YLT-1001A0008Q'},
+        'LV': {'country': 'Latvia', 'Code': 'MBA|LV', 'ENTSOe_ID': 'CTY|10YLV-1001A00074!MBA|10YLV-1001A00074'},
+        'MD': {'country': 'Moldova', 'Code': 'MBA|MD', 'ENTSOe_ID': 'CTY|MD!MBA|Not delivered MD'},
+        'ME': {'country': 'Montenegro', 'Code': 'MBA|ME', 'ENTSOe_ID': 'CTY|10YCS-CG-TSO---S!MBA|10YCS-CG-TSO---S'},
+        'MK': {'country': 'FYR Macedonia', 'Code': 'MBA|MK', 'ENTSOe_ID': 'CTY|10YMK-MEPSO----8!MBA|10YMK-MEPSO----8'},
+        'MT': {'country': 'Malta', 'Code': 'MBA|MT', 'ENTSOe_ID': 'CTY|10Y1001A1001A93C!MBA|10Y1001A1001A93C'},
+        'NL': {'country': 'Netherlands', 'Code': 'MBA|NL', 'ENTSOe_ID': 'CTY|10YNL----------L!MBA|10YNL----------L'},
+        'NO': {'country': 'Norway', 'Code': 'MBA|NO', 'ENTSOe_ID': 'CTY|10YNO-0--------C!MBA|10YNO-0--------C'},
+        'NO1': {'country': 'Norway', 'Code': 'MBA|NO1', 'ENTSOe_ID': 'CTY|10YNO-0--------C!MBA|10YNO-1--------2'},
+        'NO2': {'country': 'Norway', 'Code': 'MBA|NO2', 'ENTSOe_ID': 'CTY|10YNO-0--------C!MBA|10YNO-2--------T'},
+        'NO3': {'country': 'Norway', 'Code': 'MBA|NO3', 'ENTSOe_ID': 'CTY|10YNO-0--------C!MBA|10YNO-3--------J'},
+        'NO4': {'country': 'Norway', 'Code': 'MBA|NO4', 'ENTSOe_ID': 'CTY|10YNO-0--------C!MBA|10YNO-4--------9'},
+        'NO5': {'country': 'Norway', 'Code': 'MBA|NO5', 'ENTSOe_ID': 'CTY|10YNO-0--------C!MBA|10Y1001A1001A48H'},
+        'PL': {'country': 'Poland', 'Code': 'MBA|PL', 'ENTSOe_ID': 'CTY|10YPL-AREA-----S!MBA|10YPL-AREA-----S'},
+        'PT': {'country': 'Portugal', 'Code': 'MBA|PT', 'ENTSOe_ID': 'CTY|10YPT-REN------W!MBA|10YPT-REN------W'},
+        'RO': {'country': 'Romania', 'Code': 'MBA|RO', 'ENTSOe_ID': 'CTY|10YRO-TEL------P!MBA|10YRO-TEL------P'},
+        'RS': {'country': 'Serbia', 'Code': 'MBA|RS', 'ENTSOe_ID': 'CTY|10YCS-SERBIATSOV!MBA|10YCS-SERBIATSOV'},
+        'RU': {'country': 'Russia', 'Code': 'MBA|RU', 'ENTSOe_ID': 'CTY|RU!MBA|10Y1001A1001A49F'},
+        'RU-KGD': {'country': 'Russia', 'Code': 'MBA|RU-KGD', 'ENTSOe_ID': 'CTY|RU!MBA|10Y1001A1001A50U'},
+        'SE': {'country': 'Sweden', 'Code': 'MBA|SE', 'ENTSOe_ID': 'CTY|10YSE-1--------K!MBA|10YSE-1--------K'},
+        'SE1': {'country': 'Sweden', 'Code': 'MBA|SE1', 'ENTSOe_ID': 'CTY|10YSE-1--------K!MBA|10Y1001A1001A44P'},
+        'SE2': {'country': 'Sweden', 'Code': 'MBA|SE2', 'ENTSOe_ID': 'CTY|10YSE-1--------K!MBA|10Y1001A1001A45N'},
+        'SE3': {'country': 'Sweden', 'Code': 'MBA|SE3', 'ENTSOe_ID': 'CTY|10YSE-1--------K!MBA|10Y1001A1001A46L'},
+        'SE4': {'country': 'Sweden', 'Code': 'MBA|SE4', 'ENTSOe_ID': 'CTY|10YSE-1--------K!MBA|10Y1001A1001A47J'},
+        'SI': {'country': 'Slovenia', 'Code': 'MBA|SI', 'ENTSOe_ID': 'CTY|10YSI-ELES-----O!MBA|10YSI-ELES-----O'},
+        'SK': {'country': 'Slovakia', 'Code': 'MBA|SK', 'ENTSOe_ID': 'CTY|10YSK-SEPS-----K!MBA|10YSK-SEPS-----K'},
+        'TR': {'country': 'Turkey', 'Code': 'MBA|TR', 'ENTSOe_ID': 'CTY|TR!MBA|10YTR-TEIAS----W'},
+        'UA': {'country': 'Ukraine', 'Code': 'MBA|UA', 'ENTSOe_ID': 'CTY|UA!MBA|10Y1001A1001A869'},
+        'UA-WEPS': {'country': 'Ukraine', 'Code': 'MBA|UA-WEPS', 'ENTSOe_ID': 'CTY|UA!MBA|10YUA-WEPS-----0'}
+    }
+
     def get_load(self, control_area=None, latest=False, start_at=None, end_at=None,
                  forecast=False, **kwargs):
         self.handle_options(data='load', start_at=start_at, end_at=end_at, forecast=forecast,
@@ -238,6 +298,46 @@ class EUClient(BaseClient):
             url = self.base_url + export_endpoint
             response = self.fetch_entsoe(url, payload)
             day_df = self.parse_day_ahead_price(response)
+            pieces.append(day_df)
+
+        df = pd.concat(pieces)
+        sliced = self.slice_times(df)
+        return self.serialize_faster(sliced)
+
+
+    def get_imbalance(self, market_balancing_area=None, latest=False, start_at=None, end_at=None, **kwargs):
+        # https://transparency.entsoe.eu/
+        # name=
+        # &defaultValue=true
+        # &viewType=TABLE
+        # &areaType=MBA
+        # &atch=false
+        # &dateTime.dateTime=08.01.2017+00%3A00%7CUTC%7CDAYTIMERANGE
+        # &dateTime.endDateTime=08.01.2017+00%3A00%7CUTC%7CDAYTIMERANGE
+        # &marketArea.values=CTY%7C10Y1001A1001A83F!MBA%7C10Y1001A1001A82H
+        # &dateTime.timezone=UTC
+        # &dateTime.timezone_input=UTC
+        # &dataItem=ALL
+        # &timeRange=DEFAULT
+        # &exportType=CSV
+        self.handle_options(data='imbalance', start_at=start_at, end_at=end_at,
+                            latest=latest, market_balancing_area=market_balancing_area, forecast=False, **kwargs)
+        try:
+            self.options['market'] = self.MARKET_BALANCING_AREAS[market_balancing_area]['da_market']
+            self.options['frequency'] = self.MARKET_BALANCING_AREAS[market_balancing_area]['da_frequency']
+        except KeyError:
+            # default: hourly, market type DAHR
+            # market code 'DAHR' stands for day ahead hourly?
+            self.options['market'] = 'DAHR'
+            self.options['frequency'] = '1hr'
+
+        pieces = []
+        export_endpoint = 'balancing/r2/imbalance/export'
+        for date in self.dates():
+            payload = self.construct_payload_market_balancing_area(date)
+            url = self.base_url + export_endpoint
+            response = self.fetch_entsoe(url, payload)
+            day_df = self.parse_imbalance(response)
             pieces.append(day_df)
 
         df = pd.concat(pieces)
@@ -364,6 +464,39 @@ class EUClient(BaseClient):
         return payload
 
 
+    def construct_payload_market_balancing_area(self, date):
+        # format date
+        format_str = '%d.%m.%Y'
+        date_str = date.strftime(format_str) + ' 00:00|UTC|DAY'
+
+        # TSO ID from control area code
+        try:
+            TSO_ID = self.MARKET_BALANCING_AREAS[self.options['market_balancing_area']]['ENTSOe_ID']
+        except KeyError:
+            msg = 'Market balancing area code not found for %s. Options are %s' % (self.options['market_balancing_area'],
+                                                                          sorted(self.MARKET_BALANCING_AREAS.keys()))
+            raise ValueError(msg)
+
+        payload = {
+            'name': '',
+            'defaultValue': 'false',
+            'viewType': 'TABLE',
+            'atch': 'false',
+            'dateTime.dateTime': date_str,
+            'dateTime.timezone': 'UTC',
+            'dateTime.timezone_input': 'UTC',
+            'exportType': 'CSV',
+            'dataItem': 'ALL',
+            'timeRange': 'DEFAULT'
+        }
+
+        payload.update({
+            'areaType': 'MBA',
+            'marketArea.values': TSO_ID
+            })
+
+        return payload
+
     def parse_load_response(self, response):
         df = pd.read_csv(StringIO(response))
 
@@ -449,6 +582,50 @@ class EUClient(BaseClient):
 
         # Add columns
         df['ba_name'] = self.options['bidding_zone']
+        df['freq'] = self.options['frequency']
+        df['market'] = self.options['market']  # not necessarily appropriate terminology
+
+        return df
+
+    def parse_imbalance(self, response):
+        df = pd.read_csv(StringIO(response))
+
+        # columns: Balancing Time Unit (UTC),"+ Imbalance Price [EUR/MWh] - MBA|DE-LU","- Imbalance Price [EUR/MWh] - MBA|DE-LU","Total Imbalance [MWh] - MBA|DE-LU","Status"
+        timestamp_col = 'Balancing Time Unit (UTC)'
+        # get START_TIME_UTC as tz-aware datetime
+        df['START_TIME_UTC'], df['END_TIME_UTC'] = zip(
+            *df[timestamp_col].apply(lambda x: x.split(' - ')))
+        # extract frequency from time span
+        freq_timedelta = (pd.to_datetime(df['END_TIME_UTC'].iloc[0]) - pd.to_datetime(df['START_TIME_UTC'].iloc[0]))
+
+        timedelta_to_freq = {
+            pd.to_timedelta('0 days 00:15:00'): self.FREQUENCY_CHOICES.fifteenmin,
+            pd.to_timedelta('0 days 00:30:00'): '30m',
+            pd.to_timedelta('0 days 00:60:00'): self.FREQUENCY_CHOICES.hourly
+        }
+        try:
+            self.options['frequency'] = timedelta_to_freq[freq_timedelta]
+        except KeyError:
+            self.options['frequency'] = self.FREQUENCY_CHOICES.na
+        self.options['market'] = 'IMB'
+
+        # Why do these methods only work on Index and not Series?
+        df.set_index(df.START_TIME_UTC, inplace=True)
+        df.index = pd.to_datetime(df.index, utc=True, format='%d.%m.%Y %H:%M')
+        df.index.set_names('timestamp', inplace=True)
+
+        # drop columns
+        drop_col = [timestamp_col, 'END_TIME_UTC', 'START_TIME_UTC']
+        df.drop(drop_col, axis=1, inplace=True)
+
+        # drop nan rows
+        df.replace('-', np.nan, inplace=True)
+        df.replace('N/A', np.nan, inplace=True)
+
+        # clean column names: some column names include the balancing area (ex.: 'Total Imbalance [MWh] - MBA|DE-LU')
+        df.rename(columns=lambda x: str(x).partition(' -')[0], inplace=True)
+        # Add columns
+        df['ba_name'] = 'MBA|' + self.options['market_balancing_area']
         df['freq'] = self.options['frequency']
         df['market'] = self.options['market']  # not necessarily appropriate terminology
 
